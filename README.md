@@ -1,10 +1,10 @@
 # Configuración de weechat con: SSL, SASL y RELAY server
 
-Instalación de weechat en centOs 7 y debian, uso de SSL para conectarse a freenode, SASL para identificarse en freenode y  configuración del servidor relay y los clientes
+Instalación de weechat en centOs 7 y debian, uso de SSL para conectarse a freenode, SASL para identificarse en freenode y configuración del servidor relay y los clientes
 
 ## Compilar weechat
 
-Para poder usar SASL es necesario que weechat tenga el mecanismo de autenticación SASL 'ecdsa-nist256p-challenge', para eso es necesario compilarlo y que el paquete 'libgnutls28-dev' (gnutls-devel en centOs).
+Para poder usar SASL es necesario que weechat tenga el mecanismo de autenticación SASL 'ecdsa-nist256p-challenge', para eso es necesario compilarlo y que el paquete 'libgnutls28-dev' (gnutls-devel en centOs) esté instalado.
 
 ### Dependencias de weechat en Debian
 
@@ -19,7 +19,7 @@ Con el siguiente comando se deben instalar todas las dependencias necesarias par
 
 - $ git clone https://github.com/weechat/weechat.git
 
-### Instalar weechat
+### Compilar e Instalar weechat
 
 - $ ./autogen.sh
 - $ mkdir build
@@ -27,5 +27,33 @@ Con el siguiente comando se deben instalar todas las dependencias necesarias par
 - $ ../configure
 - $ make
 - # make install
+
+# Servidor RELAY
+## Configurar weechat
+
+- Fuente: http://erebor.teraflops.info/blog/2015-06-22/weechat/#.VjY4XGcvekA
+
+### Establecer mecanismo SASL para freenode
+
+- Generar la key:
+
+$ openssl ecparam -genkey -name prime256v1 >~/.weechat/ecdsa.pem
+
+- Obtener la clave pública:
+
+$ openssl ec -noout -text -conv_form compressed -in ~/.weechat/ecdsa.pem | grep '^pub:' -A 3 | tail -n 3 | tr -d ' \n:' | xxd -r -p | base64
+
+- Conectar al servidor, identificarse y establecer la clave pública.
+/connect freenode
+/msg nickserv identify tu_contraseña_de_freenode
+/msg nickserv set pubkey pegar_aquí_la_clave_obtenida
+
+- Configurar las opciones de SASL
+/set irc.server.freenode.sasl_mechanism ecdsa-nist256p-challenge
+/set irc.server.freenode.sasl_username "your_nickname"
+/set irc.server.freenode.sasl_key "%h/ecdsa.pem"
+
+
+
 
 
