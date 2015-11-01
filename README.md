@@ -40,15 +40,21 @@ Para poder usar SASL es necesario que weechat tenga el mecanismo de autenticaci�
 
 ### Crear servidor 'freenode'
 
-- /server add freenode chat.freenode.net/6697 -ssl
+~~~
+/server add freenode chat.freenode.net/6697 -ssl
+~~~
 
 ### Crear el servidor 'hispano'
 
-- /server add hispano ssl.chathispano.com/6697 -ssl
+~~~
+/server add hispano ssl.chathispano.com/6697 -ssl
+~~~
 
 #### Nota: En caso de usar centOs, igual hay que hacer lo siguiente:
 
-- /set weechat.network.gnutls_ca_file "/etc/ssl/certs/ca-bundle.crt"
+~~~
+/set weechat.network.gnutls_ca_file "/etc/ssl/certs/ca-bundle.crt"
+~~~
 
 ### Configurar weechat con tus credenciales (esto ya lo sabes)
 
@@ -64,27 +70,31 @@ Para poder usar SASL es necesario que weechat tenga el mecanismo de autenticaci�
 
 #### Conectar al servidor, identificarse y establecer la clave pública.
 
-- /connect freenode
-
-- /msg nickserv identify tu_contraseña_de_freenode
-
-- /msg nickserv set pubkey pegar_aquí_la_clave_pública_obtenida
+~~~
+/connect freenode
+/msg nickserv identify tu_contraseña_de_freenode
+/msg nickserv set pubkey pegar_aquí_la_clave_pública_obtenida
+~~~
 
 #### Configurar las opciones de SASL
 
-- /set irc.server.freenode.sasl_mechanism ecdsa-nist256p-challenge
-
-- /set irc.server.freenode.sasl_username "tu_nick_de_freenode"
-
-- /set irc.server.freenode.sasl_key "%h/ecdsa.pem"
+~~~
+/set irc.server.freenode.sasl_mechanism ecdsa-nist256p-challenge
+/set irc.server.freenode.sasl_username "tu_nick_de_freenode"
+/set irc.server.freenode.sasl_key "%h/ecdsa.pem"
+~~~
 
 #### Reconectar a freenode
 
-- /reconnect freenode
+~~~
+/reconnect freenode
+~~~
 
 Si conecta puedes seguir, pero guarda antes los cambios:
 
-- /save
+~~~
+/save
+~~~
 
 ## Descargar los certificados de startssl.com 
 
@@ -101,14 +111,13 @@ Si conecta puedes seguir, pero guarda antes los cambios:
     $ cp ssl.crt /home/tu_usuario/.weechat/ssl/relay.pem
 
 ## Configurar el servidor de relay
-    
-    /relay sslcertkey
-    
-    /relay add ssl.weechat 9001
-    
-    /relay add ssl.irc 8001
-    
-    /set relay.network.password ********
+
+~~~
+/relay sslcertkey
+/relay add ssl.weechat 9001
+/relay add ssl.irc 8001
+/set relay.network.password ********
+~~~
 
 # Instalar los clientes de relay
 
@@ -130,10 +139,10 @@ Si conecta puedes seguir, pero guarda antes los cambios:
 
 ## Configurar weechat (en los clientes)
 
-> /server add freenode ip_o_nombre_de_tu_servidor_de_relay/8001 -ssl -password=freenode:password_introducido_asl_crear_el_relay
-
-> /server add hispano ip_o_nombre_de_tu_servidor_de_relay/8001 -ssl -password=hispano:password_introducido_asl_crear_el_relay
-
+~~~
+/server add freenode ip_o_nombre_de_tu_servidor_de_relay/8001 -ssl -password=freenode:password_introducido_asl_crear_el_relay
+/server add hispano ip_o_nombre_de_tu_servidor_de_relay/8001 -ssl -password=hispano:password_introducido_asl_crear_el_relay
+~~~
 ### Si hay problemas con el tamaño de la clave:
 
 ~~~
