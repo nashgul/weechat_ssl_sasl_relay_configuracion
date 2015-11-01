@@ -138,4 +138,4 @@ Si conecta puedes seguir, pero guarda antes los cambios:
 
 - /set irc.server.freenode.ssl_dhkey_size 1024
 
-Bueno, si he cometido errores os podeis quejar con toda la razón en: sinp13@gmail.com 
+Bueno, si he cometido errores os podéis quejar con toda la razón en: sinp13@gmail.com 
