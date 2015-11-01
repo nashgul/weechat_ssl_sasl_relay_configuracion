@@ -13,7 +13,7 @@ Para poder usar SASL es necesario que weechat tenga el mecanismo de autenticaci√
 ### Dependencias de weechat para centOs 7
     
     # yum groupinstall "Development Tools"
-    # yum install gnutls-devel ncurses-devel gettext-devel gnutls-devel aspell-devel python-devel perl-devel ruby-devel lua-devel tcl-devel guile-devel mod_perl-devel
+    # yum install ca-certificates gnutls-devel ncurses-devel gettext-devel gnutls-devel aspell-devel python-devel perl-devel ruby-devel lua-devel tcl-devel guile-devel mod_perl-devel
 
 ### Descargar weechat
 
