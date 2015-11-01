@@ -130,9 +130,9 @@ Si conecta puedes seguir, pero guarda antes los cambios:
 
 ## Configurar weechat (en los clientes)
 
-- /server add freenode ip_o_nombre_de_tu_servidor_de_relay/8001 -ssl -password=freenode:password_introducido_asl_crear_el_relay
+> /server add freenode ip_o_nombre_de_tu_servidor_de_relay/8001 -ssl -password=freenode:password_introducido_asl_crear_el_relay
 
-- /server add hispano ip_o_nombre_de_tu_servidor_de_relay/8001 -ssl -password=hispano:password_introducido_asl_crear_el_relay
+> /server add hispano ip_o_nombre_de_tu_servidor_de_relay/8001 -ssl -password=hispano:password_introducido_asl_crear_el_relay
 
 ### Si hay problemas con el tamaño de la clave:
 
