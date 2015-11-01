@@ -8,7 +8,6 @@ Para poder usar SASL es necesario que weechat tenga el mecanismo de autenticaci√
 
 ### Dependencias de weechat en Debian
 
-Con el siguiente comando se deben instalar todas las dependencias necesarias para una correcta compilaci√≥n:
     # apt-get install cmake pkg-config libncursesw5-dev libcurl4-gnutls-dev zlib1g-dev libgcrypt20-dev libgnutls28-dev gettext ca-certificates libaspell-dev python-dev libperl-dev ruby2.1-dev liblua5.2-dev tcl-dev guile-2.0-dev libv8-dev asciidoc source-highlight xsltproc docbook-xml docbook-xsl libcpputest-dev autotools-dev dh-autoreconf
 
 ### Dependencias de weechat para centOs 7
