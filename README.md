@@ -64,7 +64,7 @@ Con el siguiente comando se deben instalar todas las dependencias necesarias par
 
 - /msg nickserv identify tu_contraseña_de_freenode
 
-- /msg nickserv set pubkey pegar_aquí_la_clave_obtenida
+- /msg nickserv set pubkey pegar_aquí_la_clave_pública_obtenida
 
 #### Configurar las opciones de SASL
 
