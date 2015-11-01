@@ -103,11 +103,8 @@ Si conecta puedes seguir, pero guarda antes los cambios:
 ## Crear el pem
 
     $ cat sub.class1.server.ca.pem >> ssl.crt
-
     $ cat ssl.key >> ssl.crt
-
     $ chmod 400 ssl.crt
-    
     $ cp ssl.crt /home/tu_usuario/.weechat/ssl/relay.pem
 
 ## Configurar el servidor de relay
@@ -123,7 +120,7 @@ Si conecta puedes seguir, pero guarda antes los cambios:
 
 ## Hacer una instalación típica de weechat
 
-- En los clientes de realy no es necesario que tengan el mecanismo de SASL.
+- En los clientes de relay no es necesario que tengan el mecanismo de SASL.
 
 ### Debian
 
