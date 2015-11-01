@@ -30,7 +30,7 @@ Para poder usar SASL es necesario que weechat tenga el mecanismo de autenticaci√
 
 ## Instalaci√≥n en Archlinux
 
-    $ cower -dd weechat-git && cd weechat-git && makepkg -sri
+    # pacman -S weechat
 
 # Servidor RELAY
 
