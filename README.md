@@ -40,9 +40,9 @@ Con el siguiente comando se deben instalar todas las dependencias necesarias par
     $ openssl ecparam -genkey -name prime256v1 >~/.weechat/ecdsa.pem
 
 - Obtener la clave pública:
-
+'''
     $ openssl ec -noout -text -conv_form compressed -in ~/.weechat/ecdsa.pem | grep '^pub:' -A 3 | tail -n 3 | tr -d ' \n:' | xxd -r -p | base64
-
+'''
 - Conectar al servidor, identificarse y establecer la clave pública.
     /connect freenode
     /msg nickserv identify tu_contraseña_de_freenode
