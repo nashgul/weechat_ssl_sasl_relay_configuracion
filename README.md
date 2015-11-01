@@ -29,9 +29,11 @@ Con el siguiente comando se deben instalar todas las dependencias necesarias par
     # make install
 
 # Servidor RELAY
+
 ## Configurar weechat
 
 - Fuente: http://erebor.teraflops.info/blog/2015-06-22/weechat/#.VjY4XGcvekA
+
 ### Crear servidor 'freenode'
 
 - /server add freenode chat.freenode.net/6697 -ssl
@@ -92,7 +94,7 @@ Si conecta puedes seguir, pero guarda antes los cambios:
 
     $ chmod 400 ssl.crt
     
-    $cp ssl.crt /home/tu_usuario/.weechat/ssl/relay.pem
+    $ cp ssl.crt /home/tu_usuario/.weechat/ssl/relay.pem
 
 ## Configurar el servidor de relay
     
