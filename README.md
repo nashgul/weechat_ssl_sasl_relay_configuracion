@@ -2,7 +2,7 @@
 
 Instalación de weechat en centOs 7 y debian, uso de SSL para conectarse a freenode, SASL para identificarse en freenode y configuración del servidor relay y los clientes
 
-## Compilar weechat
+## Compilar weechat en centOs 7 y Debian Jessie
 
 Para poder usar SASL es necesario que weechat tenga el mecanismo de autenticación SASL 'ecdsa-nist256p-challenge', para eso es necesario compilarlo y que el paquete 'libgnutls28-dev' (gnutls-devel en centOs) esté instalado.
 
@@ -32,7 +32,7 @@ Para poder usar SASL es necesario que weechat tenga el mecanismo de autenticaci�
 
     # pacman -S weechat
 
-# Servidor RELAY
+# Configurar autenticación por SASL y Servidor RELAY
 
 ## Configurar weechat
 
