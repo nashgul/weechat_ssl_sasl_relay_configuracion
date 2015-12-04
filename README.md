@@ -34,7 +34,7 @@ Para poder usar SASL es necesario que weechat tenga el mecanismo de autenticaci√
 
 # Configurar autenticaci√≥n por SASL y Servidor RELAY
 
-- Fuente: http://erebor.teraflops.info/blog/2015-06-22/weechat/#.VjY4XGcvekA
+- Fuente: https://mysticemporium.xyz/blog/archives/
 
 ## Configurar weechat
 
